@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      provider_genreator|provider_builder:
+        enabled: true
+
+builders:
+  provider_builder:
+    target: ":provider_bgenerator"
+    import: "package:cage_build/cage_build.dart"
+    builder_factories: ["providerBuilder"]
+    build_extensions: {".dart": [".provider_builder.g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
