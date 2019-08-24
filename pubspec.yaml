@@ -9,7 +9,10 @@ environment:
   flutter: "<=1.9.5"
 
 dependencies:
-  cage: ^1.0.0
+  cage:
+    git:
+      url: https://github.com/RTK/cage.git
+      ref: feature/build_tools
   build_runner: ^1.6.7
   flutter:
     sdk: flutter

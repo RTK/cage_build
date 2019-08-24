@@ -8,7 +8,5 @@ import 'package:build/build.dart';
 import 'package:cage_build/src/generators/provider_generator.dart';
 import 'package:source_gen/source_gen.dart';
 
-import '../_private.dart';
-
 Builder providerBuilder(BuilderOptions options) =>
     SharedPartBuilder([ProviderGenerator()], 'provider_builder');
